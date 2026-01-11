@@ -1,8 +1,11 @@
-const user = []
+export const users = JSON.parse(localStorage.getItem('store')) || []
 
-
-
-document.querySelector('.b').addEventListener('click', () => {
+function storage(){
+    localStorage.setItem('store',JSON.stringify(users))
+}
+let but=` <button class="btn">Login</button>`
+document.querySelector('.login').innerHTML=but
+document.querySelector('.btn').addEventListener('click', () => {
     insertValues()
 })
 
@@ -13,13 +16,12 @@ function insertValues() {
     // Role
     let userRole = document.querySelector('.roles');
     let roleVal = userRole.value
-
-    user.push({
+    users.push({
         id: crypto.randomUUID(),
         name: nameVal,
         role: roleVal
     })
-    console.log(user)
+    storage()
     // Login interaction
     if (roleVal === 'client') {
         window.location.href = "../Client/client.html"
