@@ -1,0 +1,12 @@
+.box{
+    margin: 100px;
+}
+.role{
+    padding: 10px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+}
+.b{
+}
