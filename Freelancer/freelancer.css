@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.platformName {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.exit {
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+.displayGigs{
+    margin: 30px 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.displayGig{
+    width: 800px;
+    box-shadow: 0 0 5px;
+    padding: 20px;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.budget{
+    color: rgb(77, 74, 74);
+}
+.description{
+    margin-top: 15px;
+}
+.bidButton{
+    display: flex;
+    justify-content: center;
+}
+.bid{
+    margin: 20px;
+    padding: 10px 20px;
+}

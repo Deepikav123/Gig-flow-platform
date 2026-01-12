@@ -1,6 +1,6 @@
 
 const users = JSON.parse(localStorage.getItem('store'));
-let gigs=JSON.parse(localStorage.getItem('gstore')) || [];
+export const gigs=JSON.parse(localStorage.getItem('gstore')) || [];
 function GigStorage(){
     localStorage.setItem('gstore',JSON.stringify(gigs))
 }
