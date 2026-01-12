@@ -1,10 +1,10 @@
 export const users = JSON.parse(localStorage.getItem('store')) || []
 
-function storage(){
-    localStorage.setItem('store',JSON.stringify(users))
+function storage() {
+    localStorage.setItem('store', JSON.stringify(users))
 }
-let but=` <button class="btn">Login</button>`
-document.querySelector('.login').innerHTML=but
+let but = ` <button class="btn">Login</button>`
+document.querySelector('.login').innerHTML = but
 document.querySelector('.btn').addEventListener('click', () => {
     insertValues()
 })
@@ -34,7 +34,7 @@ function insertValues() {
 
 
 
-   
+
 }
 
 
