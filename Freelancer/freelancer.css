@@ -14,33 +14,87 @@
     height: 30px;
     align-items: center;
 }
-.displayGigs{
+
+.displayGigs {
     margin: 30px 130px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.displayGig{
+
+.displayGig {
     width: 800px;
     box-shadow: 0 0 5px;
     padding: 20px;
 }
 
-.title{
+.title {
     font-weight: bolder;
     font-size: xx-large;
 }
-.budget{
+
+.budget {
     color: rgb(77, 74, 74);
 }
-.description{
+
+.description {
     margin-top: 15px;
 }
-.bidButton{
+
+.bidButton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bid {
+    margin: 20px;
+    padding: 10px 20px;
+    width: 100px;
+}
+
+.b .bid {
+    display: none;
+}
+
+
+.messageBox {
+
+    display: flex;
+    align-items: center;
+}
+
+.message {
+    margin-left: 24px;
+}
+
+
+.submitButton {
     display: flex;
     justify-content: center;
 }
-.bid{
-    margin: 20px;
-    padding: 10px 20px;
+
+.form {
+    display: none;
+}
+
+.inputBox {
+    width: 380px;
+}
+
+.b .form {
+
+    display: initial;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid gray;
+    width: 500px;
+    padding: 20px;
+}
+.bidForm{
+    display: flex;
+    justify-content: center;
 }
