@@ -1,5 +1,9 @@
 let gigs = JSON.parse(localStorage.getItem('gstore'))
-console.log(gigs)
+let bidDetails = JSON.parse(localStorage.getItem('bstore')) || [];
+function BidStore() {
+    localStorage.setItem('bstore', JSON.stringify(bidDetails))
+}
+
 let code = ``;
 function display() {
     gigs.forEach((element) => {
@@ -48,6 +52,25 @@ function display() {
     document.querySelectorAll('.submit').forEach((element) => {
         let id = element.dataset.sid;
         element.addEventListener('click', () => {
+
+            // Bid amount value
+            let amount = document.querySelector('.inputBox');
+            let amountValue = amount.value;
+
+            // Bid message
+            let message = document.querySelector('.message');
+            let messageValue = message.value;
+            let bidData = {
+                gigid:id,
+                bidId: crypto.randomUUID(),
+                bidAmount: amountValue,
+                bidMessage: messageValue
+            }
+            PushInGig(bidData)
+            bidDetails.push(bidData)
+            BidStore()
+
+            console.log(bidDetails)
             document.querySelector(`.buttonId-${id}`).classList.remove('b');
 
         })
@@ -55,3 +78,12 @@ function display() {
 
 }
 display()
+
+function PushInGig(bidData) {
+gigs.forEach((ele)=>{
+if(ele.id==bidData.gigid){
+    ele.bid=bidData
+    console.log(ele)
+}
+})
+}

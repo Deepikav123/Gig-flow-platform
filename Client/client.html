@@ -9,46 +9,73 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="platformName">
-            GigFlow
+    <div class="whole">
+        <div class="header">
+            <div class="platformName">
+                GigFlow
+            </div>
+            <div class="exit">
+                <button class="logout">LogOut</button>
+            </div>
         </div>
-        <div class="exit">
-            <button class="logout">LogOut</button>
+        <div class="body">
+            <div class="greet">
+
+            </div>
+
+            <div class="gig">
+                <div class="create">
+                    <button class="createButton">+ Create a gig</button>
+                </div>
+                <div class="form">
+
+                    <div class="title a">
+                        Title:
+                        <input type="text" class="titleBox">
+                    </div>
+                    <div class="description a">
+                        Description:
+                        <textarea class="desc" rows="5" cols="40"></textarea>
+                    </div>
+                    <div class="budget a">
+                        Budget:
+                        <input type="number" class="budgetBox">
+                    </div>
+                    <div class="post">
+                        <button class="postButton">
+                            Post
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="myGigs">
+                <div class="heading">
+                    My gigs
+                </div>
+                <div class="ExistingGigs">
+                    <!-- <div class="existingGig">
+                        <div class="etitle">Title</div>
+                        <div class="ebudget">
+                            324674
+                        </div>
+                        <div class="edescription">bfhdsjbihvnbzhnbvhgnbhfndbhfvnb</div>
+                        <div class="buttons">
+
+                            <button class="viewButton">
+                                View Bids
+                            </button>
+                            <button class="close">
+                                Close Bid
+                            </button>
+
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="greet">
-
-    </div>
-
-    <div class="gig">
-        <div class="create">
-            Create a gig
-        </div>
-        <div class="form">
-
-            <div class="title a">
-                Title:
-                <input type="text" class="titleBox">
-            </div>
-            <div class="description a">
-                Description:
-                <textarea class="desc" rows="5" cols="40"></textarea>
-            </div>
-            <div class="budget a">
-                Budget:
-                <input type="number" class="budgetBox">
-            </div>
-            <div class="post">
-                <button class="postButton">
-                    Post
-                </button>
-            </div>
-
-
-        </div>
-    </div>
-
-    <script src="client.js" type="module"></script>
+    <script type="module" src="Client scripts/client.js" type="module"></script>
+    <script type="module" src="Client scripts/existingGigs.js" type="module"></script>
 </body>

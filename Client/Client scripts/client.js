@@ -8,6 +8,15 @@ let currentUser = users[users.length - 1]
 let greeting = `Hello, ${currentUser.name}`
 document.querySelector('.greet').innerHTML = greeting
 
+// Create
+document.querySelector('.createButton').addEventListener('click',()=>{
+  document.querySelector('.gig').classList.add('toggle')
+})
+
+
+
+
+
 
 // Post button
 document.querySelector('.postButton').addEventListener('click', () => {
@@ -31,7 +40,7 @@ document.querySelector('.postButton').addEventListener('click', () => {
 GigStorage()
     console.log(gigs)
 // Clearing input boxes after pressing post button
-
+document.querySelector('.gig').classList.remove('toggle')
     title.value='';
     description.value='';
     budget.value='';
