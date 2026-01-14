@@ -16,107 +16,107 @@ Freelancer
                                                                                                                                                               
 **Client Side**                                                                                                                                               
                                                                                                                                                               
-Create a new gig with:                                                                                                                                        
-1.Title                                                                                                                                                       
-2.Description                                                                                                                                                 
-3.Budget                                                                                                                                                      
-4.View all created gigs                                                                                                                                       
-5.View bids for each gig                                                                                                                                      
-6.Close bidding for a gig                                                                                                                                     
-7.Prevent new bids after closing                                                                                                                              
-8.Options to Hire or Reject bids (logic present)                                                                                                              
+1.Create a new gig with:                                                                                                                                      
+   a.Title                                                                                                                                                    
+   b.Description                                                                                                                                              
+   c.Budget                                                                                                                                                   
+2.View all created gigs                                                                                                                                       
+3.View bids for each gig                                                                                                                                      
+4.Close bidding for a gig                                                                                                                                     
+5.Prevent new bids after closing                                                                                                                              
+6.Options to Hire or Reject bids (logic present)                                                                                                              
                                                                                                                                                               
-**Freelancer Side**
-
-1.View all available gigs
-2.Submit bids with:
-3.Bid amount
-4.Message
-5.Cannot bid on closed gigs
-6.Bid data persists after page refresh
-
-**Data Storage**
-LocalStorage Usage
-The app uses localStorage to simulate backend behavior.
-
-**Data Structures**
-
-User Object
-{
-  id,
-  name,
-  role
-}
-
-Gig Object
-{
-  id,
-  title,
-  description,
-  budget,
-  bid: [],
-  status: "open" | "closed"
-}
-
-Bid Object
-{
-  bidId,
-  Username,
-  bidAmount,
-  bidMessage
-}
-
-**Tech Stack**
-
-1.HTML
-2.CSS
-3.JavaScript (ES6 Modules)
-4.Browser LocalStorage
-
-**Folder Structure**
-
+**Freelancer Side**                                                                                                                                           
+                                                                                                                                                              
+1.View all available gigs                                                                                                                                     
+2.Submit bids with:                                   
+  a.Bid amount                                                                                                                                                
+  b.Message                                                                                                                                                   
+3.Cannot bid on closed gigs                                                                                                                                   
+4.Bid data persists after page refresh                                                                                                                        
+                                                                                                                                                              
+**Data Storage**                                                                                                                                              
+LocalStorage Usage                                                                                                                                            
+The app uses localStorage to simulate backend behavior.                                                                                                       
+                                                                                                                                                              
+**Data Structures**                                                                                                                                           
+                                                                                                                                                              
+User Object                                                                                                                                                   
+{                                                                                                                                                             
+  id,                                                                                                                                                         
+  name,                                                                                                                                                       
+  role                                                                                                                                                        
+}                                                                                                                                                             
+                                                                                                                                                              
+Gig Object                                                                                                                                                    
+{                                                                                                                                                             
+  id,                                                                                                                                                         
+  title,                                                                                                                                                      
+  description,                                                                                                                                                
+  budget,                                                                                                                                                     
+  bid: [],                                                                                                                                                    
+  status: "open" | "closed"                                                                                                                                   
+}                                                                                                                                                             
+                                                                                                                                                             
+Bid Object                                                                                                                                                   
+{                                                                                                                                                             
+  bidId,                                                                                                                                                      
+  Username,                                                                                                                                                   
+  bidAmount,                                                                                                                                                  
+  bidMessage                                                                                                                                                  
+}                                                                                                                                                             
+                                                                                                                                                              
+**Tech Stack**                                                                                                                                                
+                                                                                                                                                              
+1.HTML                                                                                                                                                        
+2.CSS                                                                                                                                                         
+3.JavaScript (ES6 Modules)                                                                                                                                    
+4.Browser LocalStorage                                                                                                                                        
+                                                                                                                                                              
+**Folder Structure**                                                                                                                                          
+                                                                                                                                                              
 /Login
-  └── login.html
-  └── login.js
-
-/Client
-  └── client.html
-  └── client.js
-  └── existingGigs.js
-  └── store.js
-
-/Freelancer
-  └── freelancer.html
-  └── freelancer.js
-
-**How to Run the Project**
-
-1.Clone or download the repository
-2.Open login.html in a browser
-3.Login as a Client or Freelancer
-4.Use the dashboard based on role
-5.Refresh the page to verify data persistence
-
-**UI Note**
-
-1.UI is intentionally minimal
-2.Focus is on logic and functionality
-3.Basic styling is applied for clarity
-
-**Limitations**
-
-1.No backend or database
-2.No real authentication
-3.No advanced UI/UX
-4.No real-time updates
-
-**Future Improvements**
-
-1.Backend integration
-2.Authentication system
-3.Better UI/UX
-4.Search and filtering
-5.Bid acceptance workflow
-
-Author
-Deepika V
+  └── login.html                                                                                                                                              
+  └── login.js                                                                                                                                                
+                                                                                                                                                              
+/Client                                                                                                                                                      
+  └── client.html                                                                                                                                             
+  └── client.js                                                                                                                                               
+  └── existingGigs.js                                                                                                                                         
+  └── store.js                                                                                                                                                
+                                                                                                                                                              
+/Freelancer                                                                                                                                                   
+  └── freelancer.html                                                                                                                                         
+  └── freelancer.js                                                                                                                                           
+                                                                                                                                                              
+**How to Run the Project**                                                                                                                                    
+                                                                                                                                                              
+1.Clone or download the repository                                                                                                                            
+2.Open login.html in a browser                                                                                                                                
+3.Login as a Client or Freelancer                                                                                                                             
+4.Use the dashboard based on role                                                                                                                             
+5.Refresh the page to verify data persistence                                                                                                                 
+                                                                                                                                                              
+**UI Note**                                                                                                                                                   
+                                                                                                                                                              
+1.UI is intentionally minimal                                                                                                                                 
+2.Focus is on logic and functionality                                                                                                                         
+3.Basic styling is applied for clarity                                                                                                                        
+                                                                                                                                                              
+**Limitations**                                                                                                                                               
+                                                                                                                                                              
+1.No backend or database                                                                                                                                      
+2.No real authentication                                                                                                                                      
+3.No advanced UI/UX                                                                                                                                           
+4.No real-time updates                                                                                                                                        
+                                                                                                                                                              
+**Future Improvements**                                                                                                                                       
+                                                                                                                                                              
+1.Backend integration                                                                                                                                         
+2.Authentication system                                                                                                                                       
+3.Better UI/UX                                                                                                                                                
+4.Search and filtering                                                                                                                                        
+5.Bid acceptance workflow                                                                                                                                     
+                                                                                                                                                              
+Author                                                                                                                                                        
+Deepika V                                                                                                                                                    
