@@ -1,6 +1,6 @@
 **Project Description**
 
-1.This is a frontend-only gig marketplace application built using HTML, CSS, and Vanilla JavaScript.
+1.This is a frontend-only gig marketplace application built using HTML, CSS, and Vanilla JavaScript.                                                          
 2.The goal of the project is to simulate basic marketplace behavior (clients posting gigs and freelancers bidding) using JavaScript logic and localStorage instead of a backend.
 3.The focus of this assignment is logic, data handling, and functionality, not UI design.
 
