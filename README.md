@@ -9,24 +9,23 @@
 1.Authentication (Basic)                                                                                                                                      
 User login using name and role                                                                                                                                
                                                                                                                                                               
-2.Roles supported:
-Client
-Freelancer
-
-3.User data stored in localStorage
-
-**Client Side**
-
-Create a new gig with:
-1.Title
-2.Description
-3.Budget
-4.View all created gigs
-5.View bids for each gig
-6.Close bidding for a gig
-7.Prevent new bids after closing
-8.Options to Hire or Reject bids (logic present)
-
+2.Roles supported:                                                                                                                                            Client                                                                                                                                                        
+Freelancer                                                                                                                                                    
+                                                                                                                                                              
+3.User data stored in localStorage                                                                                                                            
+                                                                                                                                                              
+**Client Side**                                                                                                                                               
+                                                                                                                                                              
+Create a new gig with:                                                                                                                                        
+1.Title                                                                                                                                                       
+2.Description                                                                                                                                                 
+3.Budget                                                                                                                                                      
+4.View all created gigs                                                                                                                                       
+5.View bids for each gig                                                                                                                                      
+6.Close bidding for a gig                                                                                                                                     
+7.Prevent new bids after closing                                                                                                                              
+8.Options to Hire or Reject bids (logic present)                                                                                                              
+                                                                                                                                                              
 **Freelancer Side**
 
 1.View all available gigs
