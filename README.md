@@ -9,7 +9,8 @@
 1.Authentication (Basic)                                                                                                                                      
 User login using name and role                                                                                                                                
                                                                                                                                                               
-2.Roles supported:                                                                                                                                            Client                                                                                                                                                        
+2.Roles supported:  
+Client                                                                                                                                                        
 Freelancer                                                                                                                                                    
                                                                                                                                                               
 3.User data stored in localStorage                                                                                                                            
@@ -17,9 +18,9 @@ Freelancer
 **Client Side**                                                                                                                                               
                                                                                                                                                               
 1.Create a new gig with:                                                                                                                                      
-   a.Title                                                                                                                                                    
-   b.Description                                                                                                                                              
-   c.Budget                                                                                                                                                   
+    a.Title                                                                                                                                                   
+    b.Description                                                                                                                                             
+    c.Budget                                                                                                                                                  
 2.View all created gigs                                                                                                                                       
 3.View bids for each gig                                                                                                                                      
 4.Close bidding for a gig                                                                                                                                     
@@ -30,8 +31,8 @@ Freelancer
                                                                                                                                                               
 1.View all available gigs                                                                                                                                     
 2.Submit bids with:                                   
-  a.Bid amount                                                                                                                                                
-  b.Message                                                                                                                                                   
+   a.Bid amount                                                                                                                                               
+   b.Message                                                                                                                                                  
 3.Cannot bid on closed gigs                                                                                                                                   
 4.Bid data persists after page refresh                                                                                                                        
                                                                                                                                                               
@@ -75,7 +76,7 @@ Bid Object
                                                                                                                                                               
 **Folder Structure**                                                                                                                                          
                                                                                                                                                               
-/Login
+/Login                                                                                                                                                        
   └── login.html                                                                                                                                              
   └── login.js                                                                                                                                                
                                                                                                                                                               
