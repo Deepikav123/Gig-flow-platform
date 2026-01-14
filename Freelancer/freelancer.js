@@ -1,3 +1,4 @@
+import { GigStorage } from "../Client/Client scripts/store.js";
 let gigs = JSON.parse(localStorage.getItem('gstore'))
 let bidDetails = JSON.parse(localStorage.getItem('bstore')) || [];
 function BidStore() {
@@ -61,15 +62,16 @@ function display() {
             let message = document.querySelector('.message');
             let messageValue = message.value;
             let bidData = {
-                gigid:id,
+                gigid: id,
                 bidId: crypto.randomUUID(),
                 bidAmount: amountValue,
                 bidMessage: messageValue
             }
             PushInGig(bidData)
             bidDetails.push(bidData)
-            BidStore()
+            GigStorage()
 
+            BidStore()
             console.log(bidDetails)
             document.querySelector(`.buttonId-${id}`).classList.remove('b');
 
@@ -80,10 +82,11 @@ function display() {
 display()
 
 function PushInGig(bidData) {
-gigs.forEach((ele)=>{
-if(ele.id==bidData.gigid){
-    ele.bid=bidData
-    console.log(ele)
-}
-})
+    gigs.forEach((ele) => {
+        if (ele.id == bidData.gigid) {
+            ele.bid = bidData
+            console.log(ele)
+console.log(gigs)
+        }
+    })
 }

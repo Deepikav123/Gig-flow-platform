@@ -1,9 +1,12 @@
-
+import { GigStorage } from "./store.js";
+import { gigs } from "./store.js";
+import { display } from "./existingGigs.js";
 const users = JSON.parse(localStorage.getItem('store'));
-export const gigs=JSON.parse(localStorage.getItem('gstore')) || [];
-function GigStorage(){
-    localStorage.setItem('gstore',JSON.stringify(gigs))
-}
+// export const gigs=JSON.parse(localStorage.getItem('gstore')) || [];
+// export function GigStorage(){
+//     localStorage.setItem('gstore',JSON.stringify(gigs))
+// }
+console.log(users)
 let currentUser = users[users.length - 1]
 let greeting = `Hello, ${currentUser.name}`
 document.querySelector('.greet').innerHTML = greeting
@@ -38,6 +41,7 @@ document.querySelector('.postButton').addEventListener('click', () => {
         }
     )
 GigStorage()
+display()
     console.log(gigs)
 // Clearing input boxes after pressing post button
 document.querySelector('.gig').classList.remove('toggle')
