@@ -91,3 +91,11 @@
     justify-content: center;
     gap: 10px;
 }
+
+/* View */
+.viewSection{
+    display: none;
+}
+.viewToggle .viewSection{
+    display: initial;
+}

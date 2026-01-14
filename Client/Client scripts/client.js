@@ -6,7 +6,7 @@ const users = JSON.parse(localStorage.getItem('store'));
 // export function GigStorage(){
 //     localStorage.setItem('gstore',JSON.stringify(gigs))
 // }
-console.log(users)
+// console.log(users)
 let currentUser = users[users.length - 1]
 let greeting = `Hello, ${currentUser.name}`
 document.querySelector('.greet').innerHTML = greeting
@@ -37,7 +37,9 @@ document.querySelector('.postButton').addEventListener('click', () => {
             id: crypto.randomUUID(),
             title: v1,
             description: v2,
-            budget: v3
+            budget: v3,
+            bid:[],
+            status:'open'
         }
     )
 GigStorage()
@@ -50,5 +52,5 @@ document.querySelector('.gig').classList.remove('toggle')
     budget.value='';
 
 })
-
+console.log(gigs)
 
