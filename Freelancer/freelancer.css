@@ -13,6 +13,7 @@
     display: flex;
     height: 30px;
     align-items: center;
+    
 }
 
 .displayGigs {
@@ -91,10 +92,17 @@
     flex-direction: column;
     gap: 10px;
     border: 1px solid gray;
+    /* box-shadow: 0 0 3px; */
+    border-radius: 10px;
     width: 500px;
     padding: 20px;
 }
 .bidForm{
     display: flex;
     justify-content: center;
+}
+.logout{
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
 }

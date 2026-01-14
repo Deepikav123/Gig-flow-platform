@@ -1,4 +1,4 @@
-import { gigs,GigStorage } from "./store.js";
+import { gigs, GigStorage } from "./store.js";
 import { match } from "../../Freelancer/Freelance scripts/functions.js";
 export function display() {
     let DisplayGig = ``;
@@ -22,19 +22,19 @@ export function display() {
                         </div>
                         <div class="viewSection">
                         <div class="ViewName">
-                        Bid by ${gig.bid.Username}
+                        Bid by ${gig.bids.Username}
                         </div>
                         <div class="ViewAmount">
-                        Amount:${gig.bid.bidAmount}
+                        Amount:${gig.bids.bidAmount}
                         </div>
                         <div class="ViewMessage">
-                        Message:${gig.bid.bidMessage}
+                        Message:${gig.bids.bidMessage}
                         </div>
-<div class="ViewButtons">
-<button class="hire">Hire</button>
-<button class="reject">Reject</button>
-</div>
-</div>
+                        <div class="ViewButtons">
+                            <button class="hire">Hire</button>
+                            <button class="reject">Reject</button>
+                        </div>
+                        </div>
 
                         </div>
 
@@ -51,7 +51,7 @@ document.querySelectorAll('.view').forEach((button) => {
     let id = button.dataset.vid;
     button.addEventListener('click', () => {
         let matching = match(id);
-        if (matching.bid.length === 0) {
+        if (matching.bids.length === 0) {
             alert('no bids')
         }
         else {
@@ -64,8 +64,8 @@ document.querySelectorAll('.view').forEach((button) => {
 document.querySelectorAll('.close').forEach((e) => {
     let id = e.dataset.closeid;
     e.addEventListener('click', () => {
-        let matching=match(id);
-        matching.status='closed';
+        let matching = match(id);
+        matching.status = 'closed';
         GigStorage();
     })
 })

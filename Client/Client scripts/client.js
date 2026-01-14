@@ -38,7 +38,7 @@ document.querySelector('.postButton').addEventListener('click', () => {
             title: v1,
             description: v2,
             budget: v3,
-            bid:[],
+            bids:[],
             status:'open'
         }
     )

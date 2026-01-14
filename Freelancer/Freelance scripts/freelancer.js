@@ -99,7 +99,7 @@ display()
 function PushInGig(bidData) {
     gigs.forEach((ele) => {
         if (ele.id == bidData.gigid) {
-            ele.bid = bidData
+            ele.bids = bidData
             // console.log(ele)
             GigStorage()
 

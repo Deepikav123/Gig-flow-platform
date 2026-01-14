@@ -1,5 +1,11 @@
+
 .box{
-    margin: 100px;
+    margin: 50px;
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+    padding: 50px;
+    border-radius: 20px;
 }
 .role{
     padding: 10px;
@@ -7,6 +13,32 @@
 .login{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
-.b{
+.btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+.textbox,.role{
+   font-size: larger;
+}
+.name,.roles{
+    padding: 5px;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.platformName {
+    font-weight: bolder;
+    font-size: xx-large;
 }
