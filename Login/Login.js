@@ -22,7 +22,7 @@ function insertValues() {
         role: roleVal
     })
     storage()
-    name.value=''git 
+    name.value=''
     // Login interaction
     if (roleVal === 'client') {
         window.location.href = "../Client/client.html"
