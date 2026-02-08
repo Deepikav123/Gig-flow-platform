@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(236, 84, 110);
+    background-color: #f8f9fb;
 }
 
 .box {
@@ -10,6 +10,10 @@ body {
     padding: 50px;
     border-radius: 20px;
     background-color: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+
 }
 
 .role {
@@ -20,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    cursor: pointer;
 
 }
 
@@ -32,10 +37,12 @@ body {
     font-weight: bolder;
 
 }
-.btn:hover{
-   box-shadow: 2px 2px 3px gray;
+
+.btn:hover {
+    box-shadow: 2px 2px 3px gray;
 }
-.btn:active{
+
+.btn:active {
     margin-left: 2px;
     margin-top: 2px;
 }
@@ -57,17 +64,22 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     margin: 20px;
 }
 
 .platformName {
     font-weight: bolder;
     font-size: xx-large;
-    color: white;
+    /* color: white; */
 }
-.selectRole{
+
+.selectRole {
     /* color: green; */
-    
+
+}
+.tagline{
+    /* color: green; */
+    font-weight: bold;
 }

@@ -12,8 +12,10 @@ function display() {
     gigs.forEach((element) => {
 
         code += `  <div class="displayGig">
+        <div class="TitleAndBudget">
         <div class="title">${element.title}</div>
-        <div class="budget">Budget:₹${element.budget}</div>
+        <div class="budget">₹${element.budget}</div>
+        </div>
         <div class="description">${element.description}</div>
         <div class="bidButton buttonId-${element.id}">
             <button class="bid id-${element.id}" data-bid="${element.id}">
@@ -22,17 +24,23 @@ function display() {
 
             <div class="bidForm">
             <div class="form">
+            <div class="place">Place your bid</div>
                 <div class="amount">
-                    Bid amount:
+                <div class="AmountText">
+                    Bid amount
+                    </div>
                     <input type="number" class="inputBox i-${element.id}">
                 </div>
 
                 <div class=" messageBox ">
-                    Message:
+                <div class="MessageText">
+                    Message
+                    </div>
                     <textarea class="message m-${element.id}" rows="5" cols="50"></textarea>
                 </div>
-                <div class="submitButton" >
-                    <button class="submit" data-sid=${element.id}>Submit</button>
+                <div class="bidFormButtons" >
+                    <button class="submitButton btn" data-sid=${element.id}>Submit</button>
+                    <button class="cancelButton btn" data-cid=${element.id}>Cancel</button>
                 </div>
 
             </div>
@@ -50,10 +58,10 @@ function display() {
         ele.addEventListener('click', () => {
             let matching = match(id)
             console.log(matching)
-            if(matching.status=='closed'){
+            if (matching.status == 'closed') {
                 alert('The bid is closed');
             }
-            else{
+            else {
 
                 document.querySelector(`.buttonId-${id}`).classList.add('b');
             }
@@ -61,7 +69,13 @@ function display() {
         })
     })
 
-    document.querySelectorAll('.submit').forEach((element) => {
+    // Reset function
+    function bidFormReset(id){
+document.querySelector(`.i-${id}`).value='';
+document.querySelector(`.m-${id}`).value='';
+    }
+// Submit Button
+    document.querySelectorAll('.submitButton').forEach((element) => {
         let id = element.dataset.sid;
         element.addEventListener('click', () => {
 
@@ -72,6 +86,15 @@ function display() {
             // Bid message
             let message = document.querySelector(`.m-${id}`);
             let messageValue = message.value;
+
+            if(!amountValue || amountValue<0){
+                alert("Enter valid amount");
+                return;
+            }
+            else if(!messageValue){
+                   alert("Fill the message box");
+                   return;
+            }
             let bidData = {
                 Username: CurrentUser.name,
                 gigid: id,
@@ -79,8 +102,7 @@ function display() {
                 bidAmount: amountValue,
                 bidMessage: messageValue
             }
-            amount.value = '';
-            message.value = '';
+            bidFormReset(id);
             PushInGig(bidData)
             bidDetails.push(bidData)
 
@@ -90,6 +112,15 @@ function display() {
 
 
 
+        })
+    })
+
+    // Cancel Button
+    document.querySelectorAll('.cancelButton').forEach((btn)=>{
+        let id = btn.dataset.cid;
+        btn.addEventListener('click',()=>{
+        document.querySelector(`.buttonId-${id}`).classList.remove('b');
+bidFormReset(id);
         })
     })
 

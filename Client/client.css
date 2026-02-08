@@ -1,20 +1,23 @@
 body {
     margin: 0px;
+    background-color: #eef2f7;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: rgb(236, 84, 110);
+    background-color: #ffffff;
     position: sticky;
     top: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5e7eb;
 }
 
 .platformName {
     font-weight: bolder;
     font-size: xx-large;
-    color: white;
+
 }
 
 .exit {
@@ -24,7 +27,7 @@ body {
 }
 
 .greet {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 17px;
     /* margin-top: 20px; */
 }
@@ -120,11 +123,12 @@ body {
 }
 
 .existingGig {
-    box-shadow: 0 0 4px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: white;
 }
 
 .buttons {
@@ -148,14 +152,18 @@ body {
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 20px;
-    border: 1px solid white;
-    color: white;
-    background-color: red;
+    border: 1px solid #ef4444;
+
+    color: #ef4444;
+    /* background-color: red; */
+    background-color: transparent;
 }
 
 .logout:hover {
     box-shadow: 2px 2px 5px gray;
     cursor: pointer;
+    background-color: #ef4444;
+    color: white;
 }
 
 .a {
@@ -236,12 +244,15 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-.view{
-    background-color:  #2563eb;
+
+.view {
+    background-color: #2563eb;
 }
-.close{
+
+.close {
     background-color: red;
 }
+
 .gigButton:hover {
     box-shadow: 2px 2px 3px gray;
 }
