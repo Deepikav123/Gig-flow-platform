@@ -11,12 +11,21 @@ let currentUser = users[users.length - 1]
 let greeting = `Hello, ${currentUser.name}`
 document.querySelector('.greet').innerHTML = greeting
 
-// Create
-document.querySelector('.createButton').addEventListener('click',()=>{
-  document.querySelector('.gig').classList.add('toggle')
+// Create button
+document.querySelector('.createButton').addEventListener('click', () => {
+    document.querySelector('.gig').classList.add('toggle');
+    document.querySelector('.greetings').classList.add('hidden');
 })
 
 
+
+
+// Resetting Form
+function ResetForm() {
+    document.querySelector('.titleBox').value = "";
+    document.querySelector('.desc').value = "";
+    document.querySelector('.budgetBox').value = "";
+}
 
 
 
@@ -32,25 +41,57 @@ document.querySelector('.postButton').addEventListener('click', () => {
     // Budget
     let budget = document.querySelector('.budgetBox');
     let v3 = budget.value;
+
+    // input Validation
+if(!v1){
+   alert("Enter Title");
+   return;
+}
+else if(!v2){
+    alert("Fill the description");
+    return;
+}
+else if(!v3 || v3<0){
+        alert("Enter valid Budget");
+    return;
+}
+
+
     gigs.push(
         {
             id: crypto.randomUUID(),
             title: v1,
             description: v2,
             budget: v3,
-            bids:[],
-            status:'open'
+            bids: [],
+            status: 'open'
         }
     )
-GigStorage()
-display()
+
+    GigStorage()
+    display()
     console.log(gigs)
-// Clearing input boxes after pressing post button
-document.querySelector('.gig').classList.remove('toggle')
-    title.value='';
-    description.value='';
-    budget.value='';
+    document.querySelector('.gig').classList.remove('toggle');
+    document.querySelector('.greetings').classList.remove('hidden');
+
+    // Clearing input boxes after pressing post button
+    ResetForm()
 
 })
+
+
+// Cancel Button
+
+document.querySelector('.cancelButton').addEventListener('click', () => {
+    ResetForm();
+    document.querySelector('.gig').classList.remove('toggle');
+    document.querySelector('.greetings').classList.remove('hidden');
+
+})
+
 console.log(gigs)
 
+// LogOut Button
+document.querySelector('.logout').addEventListener('click', () => {
+    window.location.href = "../../index.html"
+})

@@ -1,12 +1,20 @@
+body {
+    margin: 0px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    padding: 20px;
+    background-color: rgb(236, 84, 110);
+    position: sticky;
+    top: 0;
 }
 
 .platformName {
     font-weight: bolder;
     font-size: xx-large;
+    color: white;
 }
 
 .exit {
@@ -17,29 +25,48 @@
 
 .greet {
     font-weight: bold;
-    font-size: x-large;
+    font-size: 17px;
+    /* margin-top: 20px; */
 }
 
 .gig {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px; */
 }
 
 .create {
     display: flex;
+
 }
 
 .createButton {
+    display: initial;
     font-size: 20px;
-
-
+    cursor: pointer;
+    padding: 5px 10px;
+    color: white;
+    background-color: rgb(80, 80, 244);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
 }
 
+.createButton:hover {
+    box-shadow: 2px 2px 3px gray;
+}
+
+.createButton:active {
+    margin-left: 2px;
+    margin-top: 2px;
+}
 
 
 .description {
     /* border: 2px solid black; */
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -54,59 +81,167 @@
 }
 
 .form {
-    
+
     display: none;
 
 }
-.toggle .form{
+
+.toggle .form {
     display: initial;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     /* box-shadow: 0 0 3px; */
     margin: 10px;
-    padding: 10px;
-    width: 600px;
-    
+    padding: 20px 100px;
+    width: 400px;
+    box-shadow: 0 0 5px gray;
+    background-color: rgb(254, 249, 249);
 }
-.body{
+
+.body {
     margin: 10px 20px;
 }
-.heading{
+
+.heading {
     font-weight: bold;
-    font-size:x-large;
+    font-size: x-large;
 }
 
 /* Existing gigs */
-.ExistingGigs{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.ExistingGigs {
+    margin: 20px 40px;
+    /* display: flex;
+    flex-direction: column; */
+    gap: 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-.existingGig{
+
+.existingGig {
     box-shadow: 0 0 4px;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.buttons{
+
+.buttons {
     margin: 10px;
     display: flex;
     justify-content: center;
     gap: 10px;
+
 }
 
 /* View */
-.viewSection{
+.viewSection {
     display: none;
 }
-.viewToggle .viewSection{
+
+.viewToggle .viewSection {
     display: initial;
 }
-.logout{
+
+.logout {
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    background-color: red;
+}
+
+.logout:hover {
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+}
+
+.a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.titleBox {
+    width: 350px;
+    padding: 5px;
+}
+
+.greetings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.budgetBox {
+    width: 353px;
+    padding: 5px;
+
+}
+
+.createHeading {
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.fb {
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Post Button */
+.postButton {
+    background-color: green;
+    margin-right: 10px;
+}
+
+.cancelButton {
+    background-color: rgb(84, 79, 79);
+
+}
+
+.fb:hover {
+    box-shadow: 2px 2px 3px gray;
+}
+
+.hidden .createButton {
+    display: none;
+}
+
+.etitle {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ebudget {
+    font-weight: bolder;
+    font-size: large;
+}
+
+.eTitlePrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gigButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.view{
+    background-color:  #2563eb;
+}
+.close{
+    background-color: red;
+}
+.gigButton:hover {
+    box-shadow: 2px 2px 3px gray;
 }

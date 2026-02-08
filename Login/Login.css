@@ -1,37 +1,61 @@
+body {
+    background-color: rgb(236, 84, 110);
+}
 
-.box{
+.box {
     margin: 50px;
-    border: 1px solid black;
+
     width: 300px;
     height: 150px;
     padding: 50px;
     border-radius: 20px;
+    background-color: white;
 }
-.role{
+
+.role {
     padding: 10px;
 }
-.login{
+
+.login {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-}
-.btn{
-    padding: 10px 20px;
-    border-radius: 10px;
 
 }
-.textbox,.role{
-   font-size: larger;
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(80, 80, 244);
+    color: white;
+    font-weight: bolder;
+
 }
-.name,.roles{
+.btn:hover{
+   box-shadow: 2px 2px 3px gray;
+}
+.btn:active{
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.textbox,
+.role {
+    font-size: larger;
+}
+
+.name,
+.roles {
     padding: 5px;
 }
 
-.body{
+.body {
     display: flex;
     justify-content: center;
 
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,4 +65,9 @@
 .platformName {
     font-weight: bolder;
     font-size: xx-large;
+    color: white;
+}
+.selectRole{
+    /* color: green; */
+    
 }

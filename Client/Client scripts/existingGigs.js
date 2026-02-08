@@ -5,17 +5,19 @@ export function display() {
     gigs.forEach((gig) => {
         DisplayGig += `
     <div class="existingGig id-${gig.id}">
+    <div class="eTitlePrice">
                         <div class="etitle">${gig.title}</div>
                         <div class="ebudget">
-                            Rs.${gig.budget}
+                            ₹${gig.budget}
+                        </div>
                         </div>
                         <div class="edescription">${gig.description}</div>
                         <div class="buttons">
 
-                            <button class="view" data-vid="${gig.id}">
+                            <button class="view gigButton" data-vid="${gig.id}">
                                 View Bids
                             </button>
-                            <button class="close" data-closeid="${gig.id}">
+                            <button class="close gigButton" data-closeid="${gig.id}">
                                 Close Bid
                             </button>
 
