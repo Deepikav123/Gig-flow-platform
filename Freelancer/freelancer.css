@@ -74,6 +74,16 @@ body {
     border-radius: 20px;
     font-weight: bold;
 }
+/* Disable bid button */
+.bid:disabled{
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+}
+.bid:hover:disabled{
+    box-shadow: 0 0 0;
+
+}
 
 .bid:hover {
     box-shadow: 2px 2px 5px gray;

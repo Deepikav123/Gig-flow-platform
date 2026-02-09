@@ -33,6 +33,7 @@ function display() {
                 </div>
 
                 <div class=" messageBox ">
+
                 <div class="MessageText">
                     Message
                     </div>
@@ -53,6 +54,20 @@ function display() {
     })
     document.querySelector('.displayGigs').innerHTML = code;
 
+
+    function Bidded(id) {
+        document.querySelector(`.id-${id}`).innerHTML = 'Bidded';
+        document.querySelector(`.id-${id}`).disabled = true;
+    }
+    // Loads bidded gig
+    gigs.forEach((ele) => {
+        let id = ele.id;
+        if (ele.bids.bidded) {
+            Bidded(id);
+        }
+    })
+
+
     document.querySelectorAll('.bid').forEach((ele) => {
         let id = ele.dataset.bid;
         ele.addEventListener('click', () => {
@@ -64,17 +79,18 @@ function display() {
             else {
 
                 document.querySelector(`.buttonId-${id}`).classList.add('b');
+
             }
 
         })
     })
 
     // Reset function
-    function bidFormReset(id){
-document.querySelector(`.i-${id}`).value='';
-document.querySelector(`.m-${id}`).value='';
+    function bidFormReset(id) {
+        document.querySelector(`.i-${id}`).value = '';
+        document.querySelector(`.m-${id}`).value = '';
     }
-// Submit Button
+    // Submit Button
     document.querySelectorAll('.submitButton').forEach((element) => {
         let id = element.dataset.sid;
         element.addEventListener('click', () => {
@@ -87,21 +103,25 @@ document.querySelector(`.m-${id}`).value='';
             let message = document.querySelector(`.m-${id}`);
             let messageValue = message.value;
 
-            if(!amountValue || amountValue<0){
+            if (!amountValue || amountValue < 0) {
                 alert("Enter valid amount");
                 return;
             }
-            else if(!messageValue){
-                   alert("Fill the message box");
-                   return;
+            else if (!messageValue) {
+                alert("Fill the message box");
+                return;
             }
             let bidData = {
                 Username: CurrentUser.name,
                 gigid: id,
                 bidId: crypto.randomUUID(),
                 bidAmount: amountValue,
-                bidMessage: messageValue
+                bidMessage: messageValue,
+                bidded: true
             }
+            // Bid button -->Bidded Button
+            Bidded(id); qwdf
+
             bidFormReset(id);
             PushInGig(bidData)
             bidDetails.push(bidData)
@@ -116,11 +136,11 @@ document.querySelector(`.m-${id}`).value='';
     })
 
     // Cancel Button
-    document.querySelectorAll('.cancelButton').forEach((btn)=>{
+    document.querySelectorAll('.cancelButton').forEach((btn) => {
         let id = btn.dataset.cid;
-        btn.addEventListener('click',()=>{
-        document.querySelector(`.buttonId-${id}`).classList.remove('b');
-bidFormReset(id);
+        btn.addEventListener('click', () => {
+            document.querySelector(`.buttonId-${id}`).classList.remove('b');
+            bidFormReset(id);
         })
     })
 
@@ -138,3 +158,8 @@ function PushInGig(bidData) {
         }
     })
 }
+
+// LogOut Button
+document.querySelector('.logout').addEventListener('click', () => {
+    window.location.href = "../index.html"
+})
