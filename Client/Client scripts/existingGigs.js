@@ -3,6 +3,24 @@ import { match } from "../../Freelancer/Freelance scripts/functions.js";
 export function display() {
     let DisplayGig = ``;
     gigs.forEach((gig) => {
+        let ViewHTML = ``;
+        gig.bids.forEach((e) => {
+            ViewHTML +=
+                `<div class="ViewName">
+                        Bid by ${e.Username}
+                        </div>
+                        <div class="ViewAmount">
+                        Amount:${e.bidAmount}
+                        </div>
+                        <div class="ViewMessage">
+                        Message:${e.bidMessage}
+                        </div>
+                        <div class="ViewButtons">
+                            <button class="hire">Hire</button>
+                            <button class="reject">Reject</button>
+                        </div>`
+        })
+
         DisplayGig += `
     <div class="existingGig id-${gig.id}">
     <div class="eTitlePrice">
@@ -23,19 +41,10 @@ export function display() {
 
                         </div>
                         <div class="viewSection">
-                        <div class="ViewName">
-                        Bid by ${gig.bids.Username}
+                        <div class="ViewGigs">
+                        ${ViewHTML}
                         </div>
-                        <div class="ViewAmount">
-                        Amount:${gig.bids.bidAmount}
-                        </div>
-                        <div class="ViewMessage">
-                        Message:${gig.bids.bidMessage}
-                        </div>
-                        <div class="ViewButtons">
-                            <button class="hire">Hire</button>
-                            <button class="reject">Reject</button>
-                        </div>
+                        
                         </div>
 
                         </div>
@@ -44,6 +53,9 @@ export function display() {
 
     })
     document.querySelector('.ExistingGigs').innerHTML = DisplayGig;
+
+    let bidsHtml = "";
+
 
 
 }

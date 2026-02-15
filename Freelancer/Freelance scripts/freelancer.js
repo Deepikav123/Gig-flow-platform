@@ -62,7 +62,7 @@ function display() {
     // Loads bidded gig
     gigs.forEach((ele) => {
         let id = ele.id;
-        if (ele.bids.bidded) {
+        if (ele.bids.bidded==true) {
             Bidded(id);
         }
     })
@@ -120,7 +120,7 @@ function display() {
                 bidded: true
             }
             // Bid button -->Bidded Button
-            Bidded(id); qwdf
+            Bidded(id);
 
             bidFormReset(id);
             PushInGig(bidData)
@@ -150,11 +150,11 @@ display()
 function PushInGig(bidData) {
     gigs.forEach((ele) => {
         if (ele.id == bidData.gigid) {
-            ele.bids = bidData
+            ele.bids.push( bidData);
             // console.log(ele)
-            GigStorage()
+            GigStorage();
 
-            console.log(gigs)
+            console.log(gigs);
         }
     })
 }
