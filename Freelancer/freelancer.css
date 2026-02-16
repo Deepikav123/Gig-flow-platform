@@ -182,3 +182,21 @@ font-weight: bold;
     display: flex;
     justify-content: space-between;
 }
+
+.left{
+    display: flex;
+
+}
+.status{
+    display: flex;
+    align-items: center;
+   
+    margin-left: 3px;
+
+}
+.left .open{
+    color: green;
+}
+.left .closed{
+    color: red;
+}

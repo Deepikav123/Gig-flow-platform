@@ -10,11 +10,16 @@ function BidStore() {
 function display() {
     let code = ``;
     gigs.forEach((element) => {
-
+        let status = element.status;
         code += `  <div class="displayGig">
         <div class="TitleAndBudget">
+        <div class="left">
         <div class="title">${element.title}</div>
+        <div class="status ${status}">•${status}</div>
+        </div>
+        <div class="right">
         <div class="budget">₹${element.budget}</div>
+        </div>
         </div>
         <div class="description">${element.description}</div>
         <div class="bidButton buttonId-${element.id}">
@@ -51,6 +56,7 @@ function display() {
 
     </div>`
 
+
     })
     document.querySelector('.displayGigs').innerHTML = code;
 
@@ -62,9 +68,12 @@ function display() {
     // Loads bidded gig
     gigs.forEach((ele) => {
         let id = ele.id;
-        if (ele.bids.bidded==true) {
-            Bidded(id);
-        }
+        ele.bids.forEach((bidEle) => {
+            if (bidEle.bidded) {
+                Bidded(id);
+            }
+        })
+
     })
 
 
@@ -150,7 +159,7 @@ display()
 function PushInGig(bidData) {
     gigs.forEach((ele) => {
         if (ele.id == bidData.gigid) {
-            ele.bids.push( bidData);
+            ele.bids.push(bidData);
             // console.log(ele)
             GigStorage();
 
