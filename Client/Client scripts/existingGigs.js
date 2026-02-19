@@ -6,18 +6,33 @@ export function display() {
         let ViewHTML = ``;
         gig.bids.forEach((e) => {
             ViewHTML +=
-                `<div class="ViewName">
-                        Bid by ${e.Username}
+                `
+                        <div class="ViewGigs">
+                        <div class="ViewName">
+                        <div class="bidBy">
+                        Bid by
+                        </div>
+                         ${e.Username}
+                         
                         </div>
                         <div class="ViewAmount">
-                        Amount:${e.bidAmount}
+                        <div class="amount">
+                        Amount
+                         </div>
+                        ${e.bidAmount}
+                       
                         </div>
                         <div class="ViewMessage">
-                        Message:${e.bidMessage}
+                        <div class="message">
+                        Message
+                        </div>
+                        ${e.bidMessage}
                         </div>
                         <div class="ViewButtons">
-                            <button class="hire">Hire</button>
-                            <button class="reject">Reject</button>
+                            <button class="hire vb">Hire</button>
+                            <button class="reject vb">Reject</button>
+                        </div>
+
                         </div>`
         })
 
@@ -30,6 +45,7 @@ export function display() {
                         </div>
                         </div>
                         <div class="edescription">${gig.description}</div>
+                        
                         <div class="buttons">
 
                             <button class="view gigButton" data-vid="${gig.id}">
@@ -40,11 +56,15 @@ export function display() {
                             </button>
 
                         </div>
+                     
+
+
                         <div class="viewSection">
-                        <div class="ViewGigs">
                         ${ViewHTML}
+                        <div class="viewCancel">
+                        <button class="cancel" data-cancelid="${gig.id}">Cancel</button>
+
                         </div>
-                        
                         </div>
 
                         </div>
@@ -69,8 +89,8 @@ document.querySelectorAll('.view').forEach((button) => {
             alert('no bids')
         }
         else {
-
             document.querySelector(`.id-${id}`).classList.add('viewToggle');
+
         }
     })
 })
@@ -82,4 +102,13 @@ document.querySelectorAll('.close').forEach((e) => {
         matching.status = 'closed';
         GigStorage();
     })
+})
+
+// Cancel Button
+document.querySelectorAll('.cancel').forEach((e) => {
+    let id = e.dataset.cancelid;
+    e.addEventListener('click', () => {
+        document.querySelector(`.id-${id}`).classList.remove('viewToggle');
+    })
+
 })

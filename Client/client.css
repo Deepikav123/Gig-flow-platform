@@ -256,3 +256,67 @@ body {
 .gigButton:hover {
     box-shadow: 2px 2px 3px gray;
 }
+.viewSection{
+    /* background-color: pink; */
+}
+/* .viewSection{
+    margin: 2px;
+    background-color: green;
+    display: grid;
+    grid-template-columns:200px 200px;
+} */
+ .bidBy,.amount,.message{
+    font-weight: bold;
+    font-size:15px;
+ }
+ .viewCancel{
+display: flex;
+justify-content: center;
+margin: 20px;
+
+ }
+ .cancel{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+      background-color: rgb(84, 79, 79);
+      color: white;
+ }
+ .cancel:hover {
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+  
+}
+.ViewButtons{
+    margin:5px 3px ;
+}
+.vb{
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.hire{
+        background-color: green;
+
+}
+.hire:hover {
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+  
+}
+.reject{
+    background-color: red;
+}
+.reject:hover {
+    box-shadow: 2px 2px 5px gray;
+    cursor: pointer;
+  
+}
+.buttons{
+    display: initial;
+}
+.viewToggle .buttons{
+    display: none;
+}
