@@ -207,7 +207,7 @@ font-weight: bold;
 /* Media */
 @media (max-width: 1000px) {
 .displayGigs {
-    margin: 25px 14px;
+    margin: 25px 25px;
     gap: 10px;
 }
    .displayGig {
@@ -217,19 +217,36 @@ font-weight: bold;
     
 } 
 .title{
-    font-size: 15px;
+    font-size: 14px;
 }
+
 .description{
-    font-size: 10px;
+    font-size: 12px;
 }
+   
 .budget{
-    font-size: 15px;
+    font-size: 12px;
 }
+    
 .status
 {
-    font-size: 8px;
-}
+    font-size: 10px;
+} 
 .bid{
     font-size: 15px;
+}
+
+
+
+.b .form {
+    margin-top: 10px;
+    width: 270px;
+    padding: 10px;
+ 
+
+}
+
+.inputBox,.message{
+    width: 270px;
 }
 }

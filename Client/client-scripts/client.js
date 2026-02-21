@@ -1,12 +1,9 @@
-import { GigStorage } from "./store.js";
-import { gigs } from "./store.js";
+import {  getGigs, setGigs } from "./store.js";
+// import { gigs } from "./store.js";
 import { display } from "./existingGigs.js";
 const users = JSON.parse(localStorage.getItem('store'));
-// export const gigs=JSON.parse(localStorage.getItem('gstore')) || [];
-// export function GigStorage(){
-//     localStorage.setItem('gstore',JSON.stringify(gigs))
-// }
-// console.log(users)
+    let gigs = getGigs();
+
 let currentUser = users[users.length - 1]
 let greeting = `Hello, ${currentUser.name}`
 document.querySelector('.greet').innerHTML = greeting
@@ -68,7 +65,8 @@ else if(!v3 || v3<0){
         }
     )
 
-    GigStorage()
+          setGigs(gigs);
+
  
     document.querySelector('.body').classList.remove('toggle');
     document.querySelector('.greetings').classList.remove('hidden');

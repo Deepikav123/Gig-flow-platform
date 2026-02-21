@@ -1,5 +1,7 @@
-import { gigs, GigStorage } from "./store.js";
+import { getGigs, setGigs } from "./store.js";
 import { match } from "../../Freelancer/freelance-scripts/functions.js";
+    let gigs = getGigs();
+
 if(gigs.length>0){
     document.querySelector('.heading').innerHTML="My Gigs";
 }
@@ -103,7 +105,7 @@ document.querySelectorAll('.close').forEach((e) => {
     }
         let matching = match(id);
         matching.status = 'closed';
-        GigStorage();
+        setGigs(gigs);
         display();
     })
 })

@@ -20,6 +20,7 @@ body {
     padding: 10px;
 }
 
+
 .login {
     display: flex;
     justify-content: center;
@@ -75,16 +76,15 @@ body {
     /* color: white; */
 }
 
-.selectRole {
-    /* color: green; */
 
-}
 .tagline{
     /* color: green; */
     font-weight: bold;
 }
 
-
+select{
+    width: 177px;
+}
 /* Media */
 @media (max-width: 1000px) {
 .box {
