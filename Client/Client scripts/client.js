@@ -13,7 +13,7 @@ document.querySelector('.greet').innerHTML = greeting
 
 // Create button
 document.querySelector('.createButton').addEventListener('click', () => {
-    document.querySelector('.gig').classList.add('toggle');
+    document.querySelector('.body').classList.add('toggle');
     document.querySelector('.greetings').classList.add('hidden');
 })
 
