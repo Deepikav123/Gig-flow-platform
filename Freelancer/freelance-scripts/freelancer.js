@@ -1,4 +1,4 @@
-import { GigStorage, gigs } from "../../Client/Client scripts/store.js";
+import { GigStorage, gigs } from "../../Client/client-scripts/store.js";
 import { match } from "./functions.js";
 const users = JSON.parse(localStorage.getItem('store'));
 let CurrentUser = users[users.length - 1]

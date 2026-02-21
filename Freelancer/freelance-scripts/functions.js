@@ -1,4 +1,4 @@
-import { gigs } from "../../Client/Client scripts/store.js";
+import { gigs } from "../../Client/client-scripts/store.js";
 
 export function match(id) {
     let matching;
