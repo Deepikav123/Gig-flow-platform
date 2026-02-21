@@ -71,7 +71,7 @@ else if(!v3 || v3<0){
     GigStorage()
     display()
     console.log(gigs)
-    document.querySelector('.gig').classList.remove('toggle');
+    document.querySelector('.body').classList.remove('toggle');
     document.querySelector('.greetings').classList.remove('hidden');
 
     // Clearing input boxes after pressing post button
@@ -84,7 +84,7 @@ else if(!v3 || v3<0){
 
 document.querySelector('.cancelButton').addEventListener('click', () => {
     ResetForm();
-    document.querySelector('.gig').classList.remove('toggle');
+    document.querySelector('.body').classList.remove('toggle');
     document.querySelector('.greetings').classList.remove('hidden');
 
 })

@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    padding: 0px;
     background-color: #eef2f7;
 }
 
@@ -101,10 +102,11 @@ body {
     width: 400px;
     box-shadow: 0 0 5px gray;
     background-color: rgb(254, 249, 249);
+ 
 }
 
 .body {
-    margin: 10px 20px;
+    padding: 10px 20px;
 }
 
 .heading {
@@ -120,6 +122,7 @@ body {
     gap: 20px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
 }
 
 .existingGig {
@@ -256,67 +259,128 @@ body {
 .gigButton:hover {
     box-shadow: 2px 2px 3px gray;
 }
-.viewSection{
+
+.viewSection {
     /* background-color: pink; */
 }
+
 /* .viewSection{
     margin: 2px;
     background-color: green;
     display: grid;
     grid-template-columns:200px 200px;
 } */
- .bidBy,.amount,.message{
+.bidBy,
+.amount,
+.message {
     font-weight: bold;
-    font-size:15px;
- }
- .viewCancel{
-display: flex;
-justify-content: center;
-margin: 20px;
+    font-size: 15px;
+}
 
- }
- .cancel{
+.viewCancel {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.cancel {
     padding: 10px 15px;
     border-radius: 5px;
     border: none;
-      background-color: rgb(84, 79, 79);
-      color: white;
- }
- .cancel:hover {
+    background-color: rgb(84, 79, 79);
+    color: white;
+}
+
+.cancel:hover {
     box-shadow: 2px 2px 5px gray;
     cursor: pointer;
-  
+
 }
-.ViewButtons{
-    margin:5px 3px ;
+
+.ViewButtons {
+    margin: 5px 3px;
 }
-.vb{
+
+.vb {
     padding: 5px 10px;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
-.hire{
-        background-color: green;
+.hire {
+    background-color: green;
 
 }
+
 .hire:hover {
     box-shadow: 2px 2px 5px gray;
     cursor: pointer;
-  
+
 }
-.reject{
+
+.reject {
     background-color: red;
 }
+
 .reject:hover {
     box-shadow: 2px 2px 5px gray;
     cursor: pointer;
-  
+
 }
-.buttons{
-    display: initial;
-}
-.viewToggle .buttons{
+
+
+.viewToggle .buttons {
     display: none;
+}
+
+.ViewMessage {
+    text-align: justify;
+}
+
+.edescription {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.desc {
+    width: 360px;
+    height: 70px;
+}
+
+
+/* Media */
+@media (max-width: 1000px) {
+    .ExistingGigs {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .toggle .form {
+        margin: 5px;
+        padding: 15px 50px;
+        width: 270px;
+        box-shadow: 0 0 5px gray;
+        background-color: rgb(254, 249, 249);
+    }
+
+    .titleBox {
+        width: 300px;
+
+    }
+
+    .desc {
+        width: 310px;
+        height: 50px;
+    }
+
+    .budgetBox {
+        width: 300px;
+
+
+    }
 }

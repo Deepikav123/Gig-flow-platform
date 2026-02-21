@@ -40,6 +40,7 @@ body {
     box-shadow: 0 0 5px;
     padding: 20px;
     background-color: white;
+    
 }
 
 .title {
@@ -55,6 +56,7 @@ body {
 
 .description {
     margin-top: 15px;
+    text-align: justify;
 }
 
 .bidButton {
@@ -199,4 +201,35 @@ font-weight: bold;
 }
 .left .closed{
     color: red;
+}
+
+
+/* Media */
+@media (max-width: 1000px) {
+.displayGigs {
+    margin: 25px 14px;
+    gap: 10px;
+}
+   .displayGig {
+    width: 300px;
+    padding: 10px;
+  
+    
+} 
+.title{
+    font-size: 15px;
+}
+.description{
+    font-size: 10px;
+}
+.budget{
+    font-size: 15px;
+}
+.status
+{
+    font-size: 8px;
+}
+.bid{
+    font-size: 15px;
+}
 }

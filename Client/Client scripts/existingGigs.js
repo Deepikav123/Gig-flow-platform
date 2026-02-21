@@ -1,5 +1,8 @@
 import { gigs, GigStorage } from "./store.js";
 import { match } from "../../Freelancer/Freelance scripts/functions.js";
+if(gigs.length>0){
+    document.querySelector('.heading').innerHTML="My Gigs";
+}
 export function display() {
     let DisplayGig = ``;
     gigs.forEach((gig) => {
