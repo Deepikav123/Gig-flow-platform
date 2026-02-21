@@ -77,12 +77,7 @@ export function display() {
     })
     document.querySelector('.ExistingGigs').innerHTML = DisplayGig;
 
-    let bidsHtml = "";
 
-
-
-}
-display()
 // View button
 document.querySelectorAll('.view').forEach((button) => {
     let id = button.dataset.vid;
@@ -99,11 +94,17 @@ document.querySelectorAll('.view').forEach((button) => {
 })
 // Close button
 document.querySelectorAll('.close').forEach((e) => {
+   
     let id = e.dataset.closeid;
     e.addEventListener('click', () => {
+         const sure=confirm("Are you sure you want to close this bid?")
+    if(!sure){
+        return;
+    }
         let matching = match(id);
         matching.status = 'closed';
         GigStorage();
+        display();
     })
 })
 
@@ -115,3 +116,7 @@ document.querySelectorAll('.cancel').forEach((e) => {
     })
 
 })
+
+}
+display()
+

@@ -69,14 +69,13 @@ else if(!v3 || v3<0){
     )
 
     GigStorage()
-    display()
-    console.log(gigs)
+ 
     document.querySelector('.body').classList.remove('toggle');
     document.querySelector('.greetings').classList.remove('hidden');
 
     // Clearing input boxes after pressing post button
     ResetForm()
-
+   display()
 })
 
 
