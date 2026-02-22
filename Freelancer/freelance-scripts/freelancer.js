@@ -1,4 +1,4 @@
-import { GigStorage, gigs } from "../../Client/client-scripts/store.js";
+import {  getGigs, setGigs} from "../../Client/client-scripts/store.js";
 import { match } from "./functions.js";
 const users = JSON.parse(localStorage.getItem('store'));
 let CurrentUser = users[users.length - 1]
@@ -6,8 +6,10 @@ let bidDetails = JSON.parse(localStorage.getItem('bstore')) || [];
 function BidStore() {
     localStorage.setItem('bstore', JSON.stringify(bidDetails))
 }
-
 function display() {
+      let gigs = getGigs();
+console.log(gigs)
+
     let code = ``;
     gigs.forEach((element) => {
         let status = element.status;
@@ -136,7 +138,7 @@ function display() {
             bidDetails.push(bidData)
 
             BidStore()
-            console.log(bidDetails)
+          
             document.querySelector(`.buttonId-${id}`).classList.remove('b');
 
 
@@ -157,13 +159,13 @@ function display() {
 display()
 
 function PushInGig(bidData) {
+      let gigs = getGigs();
     gigs.forEach((ele) => {
         if (ele.id == bidData.gigid) {
             ele.bids.push(bidData);
             // console.log(ele)
-            GigStorage();
-
-            console.log(gigs);
+                    setGigs(gigs);
+  
         }
     })
 }

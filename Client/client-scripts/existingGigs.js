@@ -1,11 +1,13 @@
 import { getGigs, setGigs } from "./store.js";
 import { match } from "../../Freelancer/freelance-scripts/functions.js";
-    let gigs = getGigs();
+    let gigsCount = getGigs();
 
-if(gigs.length>0){
+if(gigsCount.length>0){
     document.querySelector('.heading').innerHTML="My Gigs";
 }
 export function display() {
+    let gigs = getGigs();
+
     let DisplayGig = ``;
     gigs.forEach((gig) => {
         let ViewHTML = ``;
@@ -96,18 +98,19 @@ document.querySelectorAll('.view').forEach((button) => {
 })
 // Close button
 document.querySelectorAll('.close').forEach((e) => {
-   
     let id = e.dataset.closeid;
     e.addEventListener('click', () => {
          const sure=confirm("Are you sure you want to close this bid?")
     if(!sure){
         return;
     }
+    let gigs = getGigs();
         let matching = match(id);
         matching.status = 'closed';
         setGigs(gigs);
         display();
     })
+    console.log(getGigs());
 })
 
 // Cancel Button
